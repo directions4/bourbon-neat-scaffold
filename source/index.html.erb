@@ -1,27 +1,66 @@
 ---
 title: Bourbon / Neat / Bitters
 ---
-<header>
-    Header
-</header>
-
-<article>
-    <div class="device-background">
-        <div class="device-text">
-            <h4>Text about App or Device</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, recusandae? Deserunt repellendus.</p>
-            <button>Learn More</button>
-        </div>
-        <div class="device">
-            <div class="screen"></div>
+<header class="navigation" role="banner">
+    <div class="navigation-wrapper">
+        <a href="javascript:void(0)" class="logo">
+            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">
+        </a>
+        <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+        <nav role="navigation">
+            <ul id="js-navigation-menu" class="navigation-menu show">
+                <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+                <li class="nav-link more"><a href="javascript:void(0)">More</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0)">Submenu Item</a></li>
+                        <li><a href="javascript:void(0)">Another Item</a></li>
+                        <li class="more"><a href="javascript:void(0)">Item with submenu</a>
+                            <ul class="submenu">
+                                <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
+                                <li><a href="javascript:void(0)">Another Item</a></li>
+                            </ul>
+                        </li>
+                        <li class="more"><a href="javascript:void(0)">Another submenu</a>
+                            <ul class="submenu">
+                                <li><a href="javascript:void(0)">Sub-submenu</a></li>
+                                <li><a href="javascript:void(0)">An Item</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="navigation-tools">
+            <div class="search-bar">
+                <form role="search">
+                    <input type="search" placeholder="Enter Search" />
+                    <button type="submit">
+                        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+                    </button>
+                </form>
+            </div>
+            <a href="javascript:void(0)" class="sign-up">Sign Up</a>
         </div>
     </div>
-    <head>
-        <link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-        <link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
-    </head>
+</header>
 
-    <article class="type-system-geometric">
+
+<article class="type-system-geometric">
+    <div class="hero">
+        <div class="hero-inner">
+            <a href="" class="hero-logo"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png
+" alt="Logo Image"></a>
+            <div class="hero-copy">
+                <h1>Short description of Product</h1>
+                <p>A few reasons why this product is worth using, who it's for and why they need it.</p>
+            </div>
+            <button>Learn More</button>
+        </div>
+    </div>
+
+
         <p class="type">Article Type</p>
         <h1>Article Heading</h1>
         <h2>These override some of the styles specified in the <code>_variables.scss</code> and <code>_typography.scss</code> partials in <a href="//bitters.bourbon.io">Bitters</a>. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won&rsquo;t need the wrapping class <code>.type-system-name</code>.</h2>
@@ -33,7 +72,6 @@ title: Bourbon / Neat / Bitters
         <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
         <hr>
         <p class="author">Author Name</p>
-    </article>
 
 </article>
 

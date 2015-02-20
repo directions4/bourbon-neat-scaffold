@@ -1,104 +1,3 @@
-.device-background {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-border-radius: 3px !default;
-  $base-accent-color: #477DCA !default;
-  $large-screen: em(860) !default;
-
-  p {
-    line-height: 1.5em;
-  }
-
-  h4 {
-    font-size: 1.5em;
-    margin: 0;
-  }
-  //////////////////////////////////////////////////////////////////////////////////
-
-  $device-padding-vertical: 5em;
-  $device-padding-horizontal: 0.4em;
-  $device-screen-width: 14em;
-  $device-screen-height: 25em;
-  $device-background: darken(gray, 40%);
-  $device-backside-background: darken($device-background, 10%);
-  $device-text-color: white;
-  $device-background-top: #162C4C;
-  $device-background-bottom: #0A120D;
-  $gradient-angle: 10deg;
-  $device-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
-  $device-screen-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/cosmin_capitanu_screen.jpg';
-
-  @include background(url($device-image), linear-gradient($gradient-angle, $device-background-bottom, $device-background-top), no-repeat $device-background-top scroll);
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 20em;
-  width: 100%;
-
-  .device-text {
-    color: $device-text-color;
-    padding: 2em;
-
-    @include media($large-screen) {
-      float: left;
-      max-width: 50%;
-      padding: 4em;
-    }
-
-    h4 {
-      border-bottom: 1px solid transparentize($device-text-color, 0.7);
-      margin-bottom: 0.5em;
-      padding-bottom: 0.5em;
-    }
-
-    p {
-      margin-bottom: 1.5em;
-    }
-
-    button {
-      @include button(flat, $base-accent-color);
-      padding: 0.7em 1em;
-    }
-  }
-
-  .device {
-    display: none;
-    position: relative;
-
-    @include media($large-screen) {
-      @include transform(
-              perspective(800px)
-              translateX(0px)
-              translateY(-100px)
-              translateZ(50px)
-              rotateX(0deg)
-              rotateY(-20deg)
-              rotateZ(-0deg));
-      background: $device-background;
-      border-radius: 2em;
-      box-shadow:
-      1px 0px lighten($device-backside-background, 20%),
-      4px 0px lighten($device-backside-background, 2%),
-      7px 0px $device-backside-background,
-      10px 0px $device-backside-background,
-      13px 0px $device-backside-background;
-      display: block;
-      float: right;
-      margin-bottom: -12em;
-      margin-right: 5em;
-      padding: $device-padding-vertical 0;
-      width: $device-screen-width + (2 * $device-padding-horizontal);
-      z-index: 99999;
-
-      .screen {
-        @include size($device-screen-width $device-screen-height);
-        background-image: url($device-screen-image);
-        background-size: cover;
-        border-radius: 0.2em;
-        box-shadow: inset 0 1px 8px transparentize(black, 0.5);
-        margin: auto;
-      }
-    }
-  }
-}
 article.type-system-geometric {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
@@ -236,3 +135,68 @@ article.type-system-geometric {
     font-family: $sans-serif;
   }
 }
+
+.hero {
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-border-radius: 3px !default;
+  $base-accent-color: #477DCA !default;
+  $large-screen: em(860) !default;
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $hero-background-top: #7F99BE;
+  $hero-background-bottom: #20392B;
+  $hero-color: white;
+  $gradient-angle: 10deg;
+  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
+
+  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  background-color: #324766;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 3em;
+
+  .hero-logo img {
+    height: 4em;
+    margin-bottom: 1em;
+  }
+
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    color: $hero-color;
+    margin: auto;
+    padding: 3.5em;
+    text-align: center;
+
+    .hero-copy {
+      text-align: center;
+
+      h1 {
+        font-size: 1.6em;
+        margin-bottom: 0.5em;
+
+        @include media($large-screen) {
+          font-size: 1.8em;
+        }
+      }
+
+      p {
+        font-weight: 200;
+        line-height: 1.4em;
+        margin: 0 auto 3em auto;
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+          max-width: 40%;
+        }
+      }
+    }
+
+    button {
+      @include button(flat, $base-accent-color);
+      padding: 0.7em 1em;
+    }
+  }
+}
+
